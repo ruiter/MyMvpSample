@@ -13,11 +13,6 @@
     tools:context="br.com.ruitercomp.mymvpsample.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
