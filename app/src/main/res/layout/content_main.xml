@@ -19,7 +19,7 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_marginTop="69dp"
-        android:id="@+id/editText"
+        android:id="@+id/username"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         tools:ignore="UnknownId"
@@ -30,10 +30,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:id="@+id/password"
+        android:layout_below="@+id/username"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username"
         android:hint="@string/password2" />
 
     <Button
@@ -42,6 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
         android:id="@+id/button"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/password"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
