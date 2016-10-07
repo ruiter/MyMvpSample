@@ -27,8 +27,8 @@
         android:id="@+id/editText"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:text="@string/username"
-        tools:ignore="UnknownId" />
+        tools:ignore="UnknownId"
+        android:hint="Username" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_below="@+id/editText"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
-        android:text="@string/password" />
+        android:hint="Password" />
 
     <Button
         android:text="@string/login"
