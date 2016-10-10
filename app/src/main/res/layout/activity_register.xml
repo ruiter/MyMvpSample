@@ -31,7 +31,7 @@
         android:layout_alignStart="@+id/editText"
         android:layout_marginTop="11dp"
         android:id="@+id/editText2"
-        android:hint="UserName" />
+        android:hint="Username" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,5 +61,6 @@
         android:id="@+id/progressBar"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
 </RelativeLayout>
