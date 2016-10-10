@@ -6,13 +6,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-public class MainActivity extends AppCompatActivity implements LoginView, View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements LoginView {
     private EditText username;
     private EditText password;
     private LoginPresenter presenter;
@@ -22,12 +23,27 @@ public class MainActivity extends AppCompatActivity implements LoginView, View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         progressBar = (ProgressBar) findViewById(R.id.progress);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        findViewById(R.id.button).setOnClickListener(this);
+
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.validateCredentials(username.getText().toString(), password.getText().toString());
+            }
+        });
+
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+            }
+        });
 
         presenter = new LoginPresenterImpl(this);
     }
@@ -58,11 +74,6 @@ public class MainActivity extends AppCompatActivity implements LoginView, View.O
     protected void onDestroy() {
         presenter.onDestroy();
         super.onDestroy();
-    }
-
-    @Override
-    public void onClick(View view) {
-        presenter.validateCredentials(username.getText().toString(), password.getText().toString());
     }
 
     @Override
