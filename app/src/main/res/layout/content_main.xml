@@ -44,4 +44,12 @@
         android:id="@+id/button"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        />
 </RelativeLayout>
