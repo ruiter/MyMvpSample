@@ -28,7 +28,9 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                registerPresenter.validateRegister(name.getText().toString(),
+                        username.getText().toString(),
+                        password.getText().toString());
             }
         });
 
